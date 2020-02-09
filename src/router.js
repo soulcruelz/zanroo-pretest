@@ -3,24 +3,24 @@ import ReactDOM from "react-dom"
 import {
     HashRouter,
     Route,
-    Link,
     Switch,
 } from "react-router-dom"
+import UserManagementContainer from '~/scenes/user-management'
 
 
 function App() {
     return (
         <Switch>
             <Route exact="/">
-                
+                <UserManagementContainer />
             </Route>
         </Switch>
     )
 }
 
 ReactDOM.render(
-    <Router>
+    <HashRouter>
         <App />
-    </Router>,
+    </HashRouter>,
     document.getElementById("root")
 )
